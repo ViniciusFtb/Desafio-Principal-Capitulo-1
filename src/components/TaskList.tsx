@@ -22,6 +22,7 @@ export function TaskList() {
       const isComplete = false;
       const newTask = {id: id, title: title, isComplete: isComplete}
       setTasks(tasks => [...tasks, newTask]);
+      setNewTaskTitle('');
     }
   }
 
