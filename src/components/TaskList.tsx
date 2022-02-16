@@ -21,7 +21,7 @@ export function TaskList() {
       const title = newTaskTitle;
       const isComplete = false;
       const newTask = {id: id, title: title, isComplete: isComplete}
-      setTasks(tasks => [...tasks, newTask]);
+      setTasks(prevTasks => [...prevTasks, newTask]);
       setNewTaskTitle('');
     }
   }
@@ -42,7 +42,7 @@ export function TaskList() {
 
   function handleRemoveTask(id: number) {
     // Remova uma task da listagem pelo ID
-    setTasks(tasks.filter((task) => task.id != id));
+    setTasks(tasks.filter((prevTask) => prevTask.id != id));
   }
 
   return (
